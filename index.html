@@ -1,444 +1,482 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio | William Flores</title>
-
+  <title>William Flores | Dev Mode</title>
   <meta name="description"
-    content="Portfólio de William Flores, estudante de informática com projetos em Java, JavaScript e desenvolvimento web.">
-
+    content="Portfólio de William Flores com estética pixel gamer, foco em lógica, projetos de programação, experiências e hobbies criativos.">
   <link rel="stylesheet" href="css/style.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+  <div class="boot-screen" id="boot-screen" aria-hidden="true">
+    <div class="boot-box">
+      <p class="boot-line">WF.OS v1.0</p>
+      <p class="boot-line">Carregando portfólio...</p>
+      <p class="boot-line">Inicializando interface 8-bit...</p>
+      <div class="boot-progress">
+        <span id="boot-progress-bar"></span>
+      </div>
+      <p class="boot-tip">Press start para entrar no modo dev.</p>
+    </div>
+  </div>
+
+  <div class="pixel-orb pixel-orb-a" aria-hidden="true"></div>
+  <div class="pixel-orb pixel-orb-b" aria-hidden="true"></div>
+  <div class="pixel-stars" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
   <header>
     <div class="header-container">
+      <a class="brand" href="#intro" aria-label="Voltar para o topo">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span class="brand-text">WF.DEV</span>
+      </a>
 
-      <div class="logo-redes">
-        <i class="fa-brands fa-java"></i>
-      </div>
+      <div class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir menu">&#9776;</div>
+
+      <nav id="nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="#intro">Start</a></li>
+          <li><a href="#sobre">Profile</a></li>
+          <li><a href="#skills">Skill Tree</a></li>
+          <li><a href="#projetos">Projects</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#contato">Contact</a></li>
+        </ul>
+      </nav>
 
       <div class="redes-sociais">
-        <a href="https://www.instagram.com/will_flores_ofc" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/will_flores_ofc" target="_blank" rel="noreferrer" aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
-
-        <a href="https://github.com/WillFlores-Fox" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/William-MC-Flores" target="_blank" rel="noreferrer" aria-label="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
-
-        <a href="https://wa.me/5551996390515" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/5551996390515" target="_blank" rel="noreferrer" aria-label="WhatsApp">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
       </div>
-
     </div>
-
-    <div class="menu-hamburguer" id="menu-hamburguer">&#9776;</div>
-
-    <nav id="nav">
-      <ul>
-        <li><a href="#intro">Início</a></li>
-        <li><a href="#conteudo-central">Sobre</a></li>
-        <li><a href="#habilidades">Experiências</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-
   </header>
 
   <main>
+    <section id="intro" class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy panel panel-primary">
+          <p class="eyebrow">PLAYER 01 ONLINE</p>
+          <h1 class="titulo glitch" data-text="William Flores">William Flores <span>buildando lógica, código e estilo.</span></h1>
+          <p class="typing" data-text="Eu gosto de resolver problema de verdade: pensar, testar, errar, ajustar e transformar a ideia em algo funcionando com identidade própria."></p>
 
-    <section id="intro">
-      <div class="resumo">
-        <h1>Bem-vindo, eu sou William Flores</h1>
+          <div class="hero-tags">
+            <span>Java</span>
+            <span>Web</span>
+            <span>Hackathon</span>
+            <span>Game vibe</span>
+          </div>
 
-        <p>
-          "Sou o tipo de pessoa que é apaixonada por uma bela xícara de café,
-          junto de belas horas de programação em Java."
-        </p>
+          <div class="hero-console">
+            <p><span>root@wf</span>: inicializando portfólio autoral...</p>
+            <p><span>module</span>: lógica, interface, criatividade e execução</p>
+          </div>
+
+          <div class="status-bar">
+            <div class="status-item">
+              <span class="status-label">Lógica</span>
+              <span class="status-track"><b style="width: 92%"></b></span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Criatividade</span>
+              <span class="status-track"><b style="width: 88%"></b></span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Evolução</span>
+              <span class="status-track"><b style="width: 96%"></b></span>
+            </div>
+          </div>
+
+          <div class="botoes-intro">
+            <a href="#projetos" class="btn">Ver projetos</a>
+            <a href="#contato" class="btn-outline">Falar comigo</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel panel terminal-panel">
+          <p class="panel-label">SYSTEM HUD</p>
+          <div class="terminal-top">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="terminal-body">
+            <p><span>&gt;</span> status: coding</p>
+            <p><span>&gt;</span> foco: backend + frontend</p>
+            <p><span>&gt;</span> energia: cafe + criatividade</p>
+            <p><span>&gt;</span> modo: competitivo / colaborativo</p>
+          </div>
+          <div class="hero-stats">
+            <article>
+              <strong>19</strong>
+              <span>anos</span>
+            </article>
+            <article>
+              <strong>5+</strong>
+              <span>competições</span>
+            </article>
+            <article>
+              <strong>100%</strong>
+              <span>vontade de evoluir</span>
+            </article>
+          </div>
+        </aside>
       </div>
     </section>
 
-
-    <section id="conteudo-central">
-
-      <div class="bloco">
-
-        <div class="imagem">
-          <img src="image/perfil (2).jpg" alt="Foto de William Flores">
-        </div>
-
-        <div class="texto">
-
-          <h3>Quem eu sou?</h3>
-
-          <p>
-            Olá! Me chamo William Meireles da Cunha Flores, tenho 19 anos,
-            sou estudante do ensino médio e do técnico de informática no
-            colégio Ulbra São Lucas.
-          </p>
-
-          <p>
-            Sempre tive curiosidade em aprender sobre tecnologia e programação.
-            A linguagem que mais despertou meu interesse foi o Java,
-            principalmente pelo raciocínio lógico utilizado na criação
-            de soluções e sistemas.
-          </p>
-
-          <p>
-            Procuro me aprimorar cada dia mais, desenvolvendo projetos
-            e explorando novas tecnologias dentro da área de programação.
-          </p>
-
-        </div>
-
+    <section id="sobre">
+      <div class="section-heading">
+        <p class="eyebrow">PROFILE DATA</p>
+        <h2>Minha base é lógica, curiosidade e execução.</h2>
       </div>
 
+      <div class="about-grid">
+        <article class="panel profile-card">
+          <p class="panel-label">PLAYER CARD</p>
+          <div class="avatar-frame">
+            <img src="image/perfil (2).jpg" alt="Foto de William Flores">
+          </div>
+          <div class="profile-meta">
+            <h3>William Meireles da Cunha Flores</h3>
+            <p>Estudante do ensino médio e do técnico em informática no Colégio Ulbra São Lucas, construindo minha base com prática, competição e curiosidade constante.</p>
+          </div>
+        </article>
 
-
-      <div class="bloco inverso">
-
-        <div class="imagem">
-          <img src="image/torneio.jpg" alt="Torneio de robótica 2022">
-        </div>
-
-        <div class="texto">
-
-          <h3>Experiências escolares</h3>
-
-          <h4>26° Jogos Luteranos - Campeonato de Robótica (2022)</h4>
-          <p>
-            Primeiro campeonato participado, possuindo meu primeiro contato
-            com construção de robôs. Com auxílio da equipe foi conquistado
-            o primeiro lugar.
-          </p>
-
-          <br>
-
-          <h4>27° Jogos Luteranos - Campeonato de Robótica (2023)</h4>
-          <p>
-            Última competição disponibilizada pelo colégio para o fundamental.
-            Mesmo com equipe reduzida, foi conquistado o terceiro lugar.
-          </p>
-
-          <br>
-
-          <h4>27° Jogos Luteranos - Torneio de Xadrez (2023)</h4>
-          <p>
-            Primeira participação no torneio, ainda sem muita experiência
-            competitiva.
-          </p>
-
-          <br>
-
-          <h4>Desafio Nacional Acadêmico - DNA (2022)</h4>
-          <p>
-            Competição entre colégios do Brasil inteiro onde foi
-            conquistado o segundo lugar.
-          </p>
-
-          <br>
-
-          <h4>Hackathon São Lucas (2025)</h4>
-          <p>
-            Primeiro hackathon participado, trabalhando em equipe
-            para desenvolver uma solução para um problema real.
-            Conquistamos o segundo lugar.
-          </p>
-
-        </div>
-
+        <article class="panel lore-card">
+          <p class="panel-label">CORE LORE</p>
+          <h3>Quem eu sou</h3>
+          <p>Meu perfil é de quem gosta de entender a regra do jogo antes de sair clicando. Quando vejo um problema, a primeira coisa que penso é na lógica por trás dele.</p>
+          <p>O Java me chamou atenção porque combina com esse meu jeito: organização, clareza, raciocínio e construção de soluções passo a passo.</p>
+          <p>Também valorizo estética e identidade. Não gosto de criar algo sem personalidade, seja em código, interface ou projeto pessoal.</p>
+          <ul class="profile-list">
+            <li>Curiosidade forte por tecnologia e programação</li>
+            <li>Interesse por soluções bem pensadas, não só visualmente bonitas</li>
+            <li>Perfil criativo que mistura código, design e hobbies artísticos</li>
+          </ul>
+        </article>
       </div>
-
-
-
-      <div class="bloco">
-
-        <div class="imagem">
-          <img src="https://as2.ftcdn.net/jpg/03/26/35/59/1000_F_326355974_XN4bd2FGc8YIxhIe93LRkloMFvcVmIAA.jpg"
-            alt="Representação de habilidades">
-        </div>
-
-        <div class="texto">
-
-          <h3>Habilidades pessoais</h3>
-
-          <h4>Músico</h4>
-
-          <p>
-            Tenho experiência com instrumentos como ukulele, cavaquinho,
-            violão, bateria e guitarra.
-          </p>
-
-          <br>
-
-          <h4>Desenhista</h4>
-
-          <p>
-            Desde pequeno gosto de desenhar e já trabalhei com
-            grafite, pintura em tecido e pintura em tela.
-          </p>
-
-          <br>
-
-          <h4>Designer gráfico</h4>
-
-          <p>
-            Tenho cerca de 4 anos de experiência criando
-            banners, convites, cartões de visita e
-            outros materiais gráficos.
-          </p>
-
-        </div>
-
-      </div>
-
     </section>
 
-
-
-    <section id="habilidades">
-
-      <h2>Minhas Experiências</h2>
-
-      <div class="botoes-linguagens">
-
-        <div class="linguagem">
-          <img src="image/java.png" alt="Java">
-        </div>
-
-        <div class="linguagem">
-          <img src="image/html.png" alt="HTML">
-        </div>
-
-        <div class="linguagem">
-          <img src="image/css-3.png" alt="CSS">
-        </div>
-
-        <div class="linguagem">
-          <img src="image/script-java.png" alt="JavaScript">
-        </div>
-
-        <div class="linguagem">
-          <img src="image/python.png" alt="Python">
-        </div>
-
-        <div class="linguagem">
-          <img src="image/scratch.png" alt="Scratch">
-        </div>
-
-        <div class="linguagem">
-          <img src="image/moon.png" alt="Moon">
-        </div>
-
+    <section id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">SKILL TREE</p>
+        <h2>Experiências que construíram meu jeito de programar.</h2>
       </div>
 
+      <div class="experience-layout">
+        <article class="panel timeline-card">
+          <p class="panel-label">MISSION LOG</p>
+          <h3>Quests concluídas</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-year">2022</span>
+              <div>
+                <h4>26º Jogos Luteranos - Robótica</h4>
+                <p>Primeiro grande campeonato. Resultado: 1º lugar.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2022</span>
+              <div>
+                <h4>DNA</h4>
+                <p>Competição nacional com conquista de 2º lugar.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2023</span>
+              <div>
+                <h4>27º Jogos Luteranos - Robótica</h4>
+                <p>Mesmo com equipe reduzida, alcançamos o 3º lugar.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2023</span>
+              <div>
+                <h4>27º Jogos Luteranos - Xadrez</h4>
+                <p>Primeira participação competitiva em torneio de xadrez.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2025</span>
+              <div>
+                <h4>Hackathon</h4>
+                <p>Primeira maratona intensa de criação em equipe. Resultado: 2º lugar.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2025-2026</span>
+              <div>
+                <h4>Rádio CSL</h4>
+                <p>Participação na rádio escolar, desenvolvendo comunicação, presença e experiência prática com mídia e produção.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel stack-card">
+          <p class="panel-label">LOADOUT</p>
+          <h3>Ferramentas do meu loadout</h3>
+          <p class="stack-copy">Essas linguagens e ferramentas representam fases importantes da minha evolução. Algumas me deram base, outras abriram visão para interface, lógica e criação de sistemas.</p>
+          <div class="botoes-linguagens">
+            <div class="linguagem">
+              <i class="fa-brands fa-java" aria-hidden="true"></i>
+              <span>Java</span>
+            </div>
+            <div class="linguagem">
+              <i class="fa-brands fa-html5" aria-hidden="true"></i>
+              <span>HTML</span>
+            </div>
+            <div class="linguagem">
+              <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+              <span>CSS</span>
+            </div>
+            <div class="linguagem">
+              <i class="fa-brands fa-js" aria-hidden="true"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="linguagem">
+              <i class="fa-brands fa-node-js" aria-hidden="true"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="linguagem">
+              <i class="fa-brands fa-python" aria-hidden="true"></i>
+              <span>Python</span>
+            </div>
+            <div class="linguagem">
+              <i class="fa-brands fa-php" aria-hidden="true"></i>
+              <span>PHP</span>
+            </div>
+            <div class="linguagem">
+              <i class="fa-brands fa-git-alt" aria-hidden="true"></i>
+              <span>Git</span>
+            </div>
+            <div class="linguagem">
+              <i class="fa-solid fa-database" aria-hidden="true"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="linguagem">
+              <i class="fa-solid fa-server" aria-hidden="true"></i>
+              <span>MariaDB</span>
+            </div>
+            <div class="linguagem">
+              <i class="fa-solid fa-moon" aria-hidden="true"></i>
+              <span>Lua</span>
+            </div>
+            <div class="linguagem">
+              <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+              <span>Scratch</span>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
-
-
 
     <section id="projetos">
-
-      <h2>Meus Projetos</h2>
+      <div class="section-heading">
+        <p class="eyebrow">PROJECT SELECT</p>
+        <h2>Projetos que mostram como penso e como construo.</h2>
+      </div>
 
       <div class="conteiner-card">
-
-        <div class="card">
-
-          <div class="card-titulo">
-            Jogo da Adivinhação
+        <article class="card">
+          <div class="card-top">
+            <span class="card-badge">Java</span>
+            <h3 class="card-titulo">Jogo da Adivinhação</h3>
           </div>
-
-          <div class="card-descricao">
-
-            <p>
-              Primeiro jogo criado em Java utilizando
-              interface JOptionPane.
-            </p>
-
-            <a href="https://github.com/WillFlores-Fox/Jogo_Da_Adivinhacao"
-              target="_blank" rel="noopener noreferrer">
-              Ver Projeto
-            </a>
-
+          <p>Primeiro jogo que fiz em Java. Aqui comecei a enxergar como a lógica consegue criar interação simples, mas divertida e funcional.</p>
+          <div class="card-meta">
+            <span>Estrutura</span>
+            <span>Condição</span>
+            <span>Gameplay</span>
           </div>
+          <a href="https://github.com/WillFlores-Fox/Jogo_Da_Adivinhacao" target="_blank" rel="noreferrer">Abrir projeto</a>
+        </article>
 
-        </div>
-
-
-
-        <div class="card">
-
-          <div class="card-titulo">
-            Introdução JavaScript
+        <article class="card">
+          <div class="card-top">
+            <span class="card-badge">JavaScript</span>
+            <h3 class="card-titulo">Introdução JavaScript</h3>
           </div>
-
-          <div class="card-descricao">
-
-            <p>
-              Primeiros passos e testes com JavaScript.
-            </p>
-
-            <a href="https://github.com/WillFlores-Fox/Introducao_JS"
-              target="_blank" rel="noopener noreferrer">
-              Ver Projeto
-            </a>
-
+          <p>Projeto de exploração inicial da linguagem, importante para entender comportamento, manipulação e lógica no navegador.</p>
+          <div class="card-meta">
+            <span>DOM</span>
+            <span>Base</span>
+            <span>Interação</span>
           </div>
+          <a href="https://github.com/WillFlores-Fox/Introducao_JS" target="_blank" rel="noreferrer">Abrir projeto</a>
+        </article>
 
-        </div>
-
-
-
-        <div class="card">
-
-          <div class="card-titulo">
-            DTO, DAO e View
+        <article class="card">
+          <div class="card-top">
+            <span class="card-badge">Arquitetura</span>
+            <h3 class="card-titulo">DTO, DAO e View</h3>
           </div>
-
-          <div class="card-descricao">
-
-            <p>
-              Primeiro projeto utilizando organização
-              com DTO, DAO e View.
-            </p>
-
-            <a href="https://github.com/WillFlores-Fox/DTO-DAO-View"
-              target="_blank" rel="noopener noreferrer">
-              Ver Projeto
-            </a>
-
+          <p>Projeto que me ajudou a enxergar melhor estrutura, separação de responsabilidades e organização de software.</p>
+          <div class="card-meta">
+            <span>Camadas</span>
+            <span>Organização</span>
+            <span>Padrão</span>
           </div>
+          <a href="https://github.com/WillFlores-Fox/DTO-DAO-View" target="_blank" rel="noreferrer">Abrir projeto</a>
+        </article>
 
-        </div>
-
-
-
-        <div class="card">
-
-          <div class="card-titulo">
-            Java + Banco de Dados
+        <article class="card">
+          <div class="card-top">
+            <span class="card-badge">Banco de dados</span>
+            <h3 class="card-titulo">Java + Banco de Dados</h3>
           </div>
-
-          <div class="card-descricao">
-
-            <p>
-              Teste de conexão entre Java
-              e banco de dados.
-            </p>
-
-            <a href="https://github.com/WillFlores-Fox/Java-Banco"
-              target="_blank" rel="noopener noreferrer">
-              Ver Projeto
-            </a>
-
+          <p>Conexão entre aplicação e banco de dados, reforçando persistência, integração e tratamento mais completo da informação.</p>
+          <div class="card-meta">
+            <span>Persistência</span>
+            <span>Conexão</span>
+            <span>Dados</span>
           </div>
+          <a href="https://github.com/WillFlores-Fox/Java-Banco" target="_blank" rel="noreferrer">Abrir projeto</a>
+        </article>
 
-        </div>
-
-
-
-        <div class="card">
-
-          <div class="card-titulo">
-            Lista de Compras JS
+        <article class="card">
+          <div class="card-top">
+            <span class="card-badge">Web App</span>
+            <h3 class="card-titulo">Lista de Compras JS</h3>
           </div>
-
-          <div class="card-descricao">
-
-            <p>
-              Lista de compras dinâmica
-              utilizando JavaScript.
-            </p>
-
-            <a href="https://willflores-fox.github.io/mercadinho/"
-              target="_blank" rel="noopener noreferrer">
-              Ver Projeto
-            </a>
-
+          <p>Aplicação dinâmica para praticar interação real com o usuário e manipulação de elementos em tempo real.</p>
+          <div class="card-meta">
+            <span>UX</span>
+            <span>Lista</span>
+            <span>Fluxo</span>
           </div>
+          <a href="https://willflores-fox.github.io/mercadinho/" target="_blank" rel="noreferrer">Abrir projeto</a>
+        </article>
 
-        </div>
-
-
-
-        <div class="card">
-
-          <div class="card-titulo">
-            Jogo Genius
+        <article class="card">
+          <div class="card-top">
+            <span class="card-badge">Game logic</span>
+            <h3 class="card-titulo">Jogo Genius</h3>
           </div>
-
-          <div class="card-descricao">
-
-            <p>
-              Versão online do clássico
-              jogo Genius com vários modos.
-            </p>
-
-            <a href="https://willflores-fox.github.io/Jogo_Genius/"
-              target="_blank" rel="noopener noreferrer">
-              Ver Projeto
-            </a>
-
+          <p>Projeto que une memória, sequência, ritmo e resposta visual. Ele combina muito com meu lado gamer e criativo.</p>
+          <div class="card-meta">
+            <span>Memória</span>
+            <span>Ritmo</span>
+            <span>Níveis</span>
           </div>
-
-        </div>
-
+          <a href="https://willflores-fox.github.io/Jogo_Genius/" target="_blank" rel="noreferrer">Abrir projeto</a>
+        </article>
       </div>
-
     </section>
 
+    <section id="hobbies">
+      <div class="section-heading">
+        <p class="eyebrow">SIDE QUESTS</p>
+        <h2>Meu lado profissional conversa com meu lado criativo.</h2>
+      </div>
 
+      <div class="hobby-grid">
+        <article class="panel hobby-card">
+          <p class="panel-label">SIDE QUEST 01</p>
+          <i class="fa-solid fa-music"></i>
+          <h3>Música</h3>
+          <p>Ukulele, cavaquinho, violão, bateria e guitarra. Música me ensinou ritmo, repetição, sensibilidade e presença.</p>
+        </article>
+
+        <article class="panel hobby-card">
+          <p class="panel-label">SIDE QUEST 02</p>
+          <i class="fa-solid fa-palette"></i>
+          <h3>Arte e desenho</h3>
+          <p>Grafite, pintura em tecido e tela. É daí que vem muito do meu gosto por projetos com identidade visual marcante.</p>
+        </article>
+
+        <article class="panel hobby-card">
+          <p class="panel-label">SIDE QUEST 03</p>
+          <i class="fa-solid fa-pen-ruler"></i>
+          <h3>Design gráfico</h3>
+          <p>Banners, cartões, convites e artes digitais. Isso influencia diretamente a forma como penso composição e interface.</p>
+        </article>
+
+        <article class="panel hobby-card">
+          <p class="panel-label">SIDE QUEST 04</p>
+          <i class="fa-solid fa-sliders"></i>
+          <h3>Sonoplasta</h3>
+          <p>Tenho envolvimento com sonoplastia, criando ambientação e cuidando da parte sonora para fortalecer a experiência e a identidade de cada momento.</p>
+        </article>
+      </div>
+    </section>
 
     <section id="contato">
-
-      <h2>Contato</h2>
-
-      <div class="contato-icones">
-
-        <a href="mailto:william.m.c.flores@outlook.com.br">
-          <img src="image/o-email.png" alt="Email">
-        </a>
-
-        <a href="https://wa.me/5551996390515" target="_blank">
-          <img src="image/whatsapp (1).png" alt="WhatsApp">
-        </a>
-
-        <a href="https://www.instagram.com/will_flores_ofc" target="_blank">
-          <img src="image/insta.png" alt="Instagram">
-        </a>
-
-        <a href="https://github.com/WillFlores-Fox" target="_blank">
-          <img src="image/git.png" alt="GitHub">
-        </a>
-
+      <div class="section-heading">
+        <p class="eyebrow">FINAL BOSS: CONTATO</p>
+        <h2>Se a missão for boa, eu topo conversar.</h2>
       </div>
 
+      <div class="contact-layout">
+        <article class="panel contact-card">
+          <p class="panel-label">OPEN CHANNEL</p>
+          <h3>O que você pode esperar de mim</h3>
+          <p>Eu gosto de entrar em projetos onde eu consiga aprender, somar e deixar algo bem resolvido. Se tiver lógica, desafio e espaço para evolução, melhor ainda.</p>
+          <ul class="profile-list">
+            <li>Dedicação real para aprender e executar</li>
+            <li>Curiosidade para resolver problemas com lógica</li>
+            <li>Vontade de crescer em projetos profissionais e criativos</li>
+          </ul>
+          <div class="contact-direct">
+            <a href="https://github.com/William-MC-Flores" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://wa.me/5551996390515" target="_blank" rel="noreferrer">WhatsApp</a>
+          </div>
+        </article>
+
+        <form id="formContato" class="form-contato panel" action="contato.php" method="POST">
+          <p class="panel-label">SEND SIGNAL</p>
+          <label>
+            <span>Nome</span>
+            <input type="text" name="nome" placeholder="Digite seu nome" required>
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="Digite seu email" required>
+          </label>
+
+          <label>
+            <span>Mensagem</span>
+            <textarea name="mensagem" placeholder="Descreva sua ideia, projeto ou convite" required></textarea>
+          </label>
+
+          <button type="submit">Enviar mensagem</button>
+          <p id="statusMensagem"></p>
+        </form>
+      </div>
     </section>
-
   </main>
-
-
 
   <footer>
     <p>&copy; <span id="ano"></span> William Flores. Todos os direitos reservados.</p>
   </footer>
 
-
-
   <script src="js/script.js" defer></script>
-
   <script>
     document.getElementById("ano").textContent = new Date().getFullYear();
   </script>
-
 </body>
 
 </html>

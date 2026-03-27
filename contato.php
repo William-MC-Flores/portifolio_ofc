@@ -1,48 +1,95 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+error_reporting(0);
 
-    // Coletar dados do formulário
-    $nome = htmlspecialchars(trim($_POST["nome"]));
-    $email = htmlspecialchars(trim($_POST["email"]));
-    $mensagem = htmlspecialchars(trim($_POST["mensagem"]));
+// ============================
+// IMPORTS
+// ============================
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    // Validar email
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        die("Email inválido.");
-    }
+require __DIR__ . '/phpmailer/src/Exception.php';
+require __DIR__ . '/phpmailer/src/PHPMailer.php';
+require __DIR__ . '/phpmailer/src/SMTP.php';
 
-    // Seu email de destino
-    $destino = "William.m.c.flores@outlook.com.br";
+// ============================
+// CAPTURA DOS DADOS
+// ============================
+$nome = trim($_POST['nome'] ?? '');
+$email = trim($_POST['email'] ?? '');
+$mensagem = trim($_POST['mensagem'] ?? '');
 
-    // Assunto do email
-    $assunto = "Nova mensagem do portfólio";
-
-    // Conteúdo do email
-    $conteudo = "Você recebeu uma nova mensagem do seu site.\n\n";
-    $conteudo .= "Nome: $nome\n";
-    $conteudo .= "Email: $email\n\n";
-    $conteudo .= "Mensagem:\n$mensagem\n";
-
-    // Cabeçalhos
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-
-    // Enviar email
-    if (mail($destino, $assunto, $conteudo, $headers)) {
-
-        // Redireciona com sucesso
-        header("Location: index.html?status=enviado");
-        exit();
-
-    } else {
-
-        // Redireciona com erro
-        header("Location: index.html?status=erro");
-        exit();
-
-    }
-
+// ============================
+// VALIDAÇÃO
+// ============================
+if (!$nome || !$email || !$mensagem) {
+    echo "Preencha todos os campos!";
+    exit;
 }
 
-?>
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "Email inválido!";
+    exit;
+}
+
+if (strlen($mensagem) > 1000) {
+    echo "Mensagem muito longa!";
+    exit;
+}
+
+// ============================
+// ENVIO
+// ============================
+$mail = new PHPMailer(true);
+
+try {
+
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+
+    $mail->Username = 'will.m.c.flores@gmail.com';
+    $mail->Password = 'sxro qajc qxlh exzb';
+
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+
+    $mail->Timeout = 10;
+    $mail->SMTPKeepAlive = false;
+
+    $mail->CharSet = 'UTF-8';
+
+    // ============================
+    // REMETENTE
+    // ============================
+    $mail->setFrom('will.m.c.flores@gmail.com', 'Portfólio');
+    $mail->addAddress('will.m.c.flores@gmail.com');
+
+    // responde direto pro usuário
+    $mail->addReplyTo($email, $nome);
+
+    // ============================
+    // CONTEÚDO
+    // ============================
+    $mail->isHTML(true);
+    $mail->Subject = 'Contato do Portfólio';
+
+    $mail->Body = "
+        <h2>Nova mensagem do site</h2>
+        <p><b>Nome:</b> " . htmlspecialchars($nome) . "</p>
+        <p><b>Email:</b> " . htmlspecialchars($email) . "</p>
+        <p><b>Mensagem:</b><br>" . nl2br(htmlspecialchars($mensagem)) . "</p>
+    ";
+
+    // versão texto (boa prática)
+    $mail->AltBody = "Nome: $nome\nEmail: $email\nMensagem:\n$mensagem";
+
+    // ============================
+    // ENVIO
+    // ============================
+    $mail->send();
+
+    echo "Mensagem enviada com sucesso!";
+} catch (Exception $e) {
+    echo "Erro ao enviar mensagem. Tente novamente.";
+}
